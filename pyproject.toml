@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "struct-diff"
+version = "0.1.0"
+description = "Semantic JSON/YAML differ that ignores key ordering + auto-generates schemas"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "struct-diff contributors"}]
+keywords = ["json", "yaml", "diff", "schema", "validation", "merge"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.0",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+toml = ["tomli>=2.0; python_version < '3.11'", "tomli-w>=1.0"]
+
+[project.scripts]
+struct-diff = "struct_diff.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/struct-diff/struct-diff"
+Repository = "https://github.com/struct-diff/struct-diff"
+
+[tool.setuptools.packages.find]
+include = ["struct_diff*"]
