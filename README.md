@@ -1,5 +1,8 @@
 # struct-diff
 
+[![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-blue?logo=anthropic&logoColor=white)](https://claude.ai/code)
+
+
 **Semantic JSON/YAML differ that ignores key ordering + auto-generates schemas.**
 
 Compare configurations without false positives from key reordering. Generate schemas from samples. Merge configs with conflict resolution.
